@@ -17,10 +17,6 @@ configure do
   DataMapper.auto_migrate!
 end
 
-get '/' do
-  'Hello world!'
-end
-
 get '/fib/:number' do
   n = params[:number].to_i
 
