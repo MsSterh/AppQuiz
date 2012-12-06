@@ -2,13 +2,13 @@ AppQuiz
 =======
 ## How to run:
 
-Use Sinatra:
+Use Sinatra with sqlite and run:
 
 ```
 $ gem install sinatra
+$ gem install datamapper dm-sqlite-adapter
 $ ruby myapp.rb
 ```
-and sqlite.
 
 ## What about:
 
