@@ -19,21 +19,18 @@ end
 
 get '/fib/:number' do
   n = params[:number].to_i
-
   if n <= 2 then
-    content_type :json
-    {:response => 1}.to_json
+    z = n == 0 ? 0 : 1
   else
     x, y, z = 1, 1, 0;
-
     (3..n).each do |i|
       z = x + y
       x = y
       y = z
     end
-    content_type :json
-    {:response => z}.to_json
   end
+  content_type :json
+  {:response => z}.to_json
 end
 
 get '/google-body' do
